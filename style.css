@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before {
+  margin: 0; /* Remove a margem padrão de todos os elementos e seus pseudo-elementos (::before e ::after). */
+  padding: 0; /* Remove o padding padrão de todos os elementos. */
+  box-sizing: inherit; /* Faz com que todos os elementos herdem o valor de 'box-sizing' do 'html'. */
+}
+
+
+html {
+  box-sizing: border-box; /* Define que o tamanho total do elemento inclui as bordas e o padding (box-model mais previsível). */
+  font-size: 62.5%; /* Define a base da fonte como 62.5% do tamanho padrão (normalmente 16px), resultando em 10px, facilitando cálculos com 'rem'. */
+}
+
+
+body {
+  font-family: "Nunito", sans-serif; /* Aplica a fonte 'Nunito' para o corpo do documento, com fallback para fontes sans-serif. */
+  color: #333; /* Define a cor do texto como um tom de cinza escuro (#333). */
+  font-weight: 300; /* Define o peso da fonte como leve (300). */
+  line-height: 1.6; /* Define o espaçamento entre linhas para 1.6 vezes o tamanho da fonte. */
+}
+
+
+.container {
+  width: 80%; /* Define a largura da div 'container' como 80% da tela. */
+  margin: 2rem auto; /* Define uma margem vertical de 2rem e centraliza o container horizontalmente. */
+}
+
+
+.gallery {
+  display: grid; /* Aplica o layout de grade à galeria, permitindo distribuir os itens em colunas e linhas. */
+  grid-template-columns: repeat(8, 1fr); /* Divide a galeria em 8 colunas com larguras iguais (1fr = 1 fração do espaço disponível). */
+  grid-template-rows: repeat(3, 1fr); /* Divide a galeria em 3 linhas com alturas iguais. */
+  grid-gap: 1.5rem; /* Define o espaçamento entre os itens da galeria como 1.5rem. */
+  gap: 20px; /* Alternativa ao grid-gap (suporte em navegadores modernos). Define o espaçamento entre os itens da galeria como 20px. */
+}
+
+
+.gallery__img {
+  width: 100%; /* Faz com que as imagens ocupem 100% da largura de suas células da grade. */
+  height: 100%; /* Faz com que as imagens ocupem 100% da altura de suas células da grade. */
+  object-fit: cover; /* Garante que as imagens cubram completamente suas células, mantendo a proporção. */
+  display: block; /* Remove os espaçamentos adicionais gerados pelo comportamento inline padrão das imagens. */
+}
+
+
+.gallery__item--1 {
+  grid-column: 1 / span 2; 
+  grid-row: 1 / span 1; 
+}
+
+
+.gallery__item--2 {
+  grid-column: 3 / span 2; 
+  grid-row: 1 / span 1;
+}
+
+
+.gallery__item--3 {
+  grid-column: 5 / span 2; 
+  grid-row: 1 / span 1; 
+}
+
+
+.gallery__item--4 {
+  grid-column: 7 / span 2; 
+  grid-row: 1 / span 1; 
+}
+
+.gallery__item--5 {
+    grid-column: 1 / span 2; 
+    grid-row: 2 / span 1;
+  }
+
+  
+.gallery__item--6 {
+    grid-column: 3 / span 2; 
+    grid-row: 2 / span 1; 
+  }
+  
+  .gallery__item--7 {
+    grid-column: 5 / span 2;
+    grid-row: 2 / span 1;
+  }
+
+  .gallery__item--8 {
+    grid-column: 7 / span 2; 
+    grid-row: 2 / span 1; 
+  }
+
+  .gallery__item--9 {
+    grid-column: 1 / span 2; 
+    grid-row: 3 / span 1; 
+  }
+
+  .gallery__item--10 {
+    grid-column: 3 / span 2; 
+    grid-row: 3 / span 1;
+  }
+
+  .gallery__item--11 {
+    grid-column: 5 / span 2;
+    grid-row: 3 / span 1; 
+  }
+
+  .gallery__item--12 {
+    grid-column: 7 / span 2; 
+    grid-row: 3 / span 1; 
+  }
